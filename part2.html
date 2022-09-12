@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2 - colors</title>
+</head>
+<body>
+    <h1>change background color</h1>
+    <h2>select your color <span id="colorOutput"></span></h2>
+
+    <label>red:</label>
+    <input type="range" id="rangeRed" value="4" min="0" max="255">
+    <label>green:</label>
+    <input type="range" id="rangeGreen" value="139" min="0" max="255">
+    <label>blue:</label>
+    <input type="range" id="rangeBlue" value="168" min="0" max="255">
+
+    <script>
+        function changeColor(){
+            let red=document.querySelector('#rangeRed').value;
+            let green=document.querySelector('#rangeGreen').value;
+            let blue=document.querySelector('#rangeBlue').value;
+            let color='rgb('+red+',' +green+','+blue+')';
+            document.body.style.backgroundColor=color;
+            document.getElementById('colorOutput').innerHTML=':'+color;
+        }
+        document.getElementById('rangeRed').addEventListener('input',changeColor);
+        document.getElementById('rangeGreen').addEventListener('input',changeColor);
+        document.getElementById('rangeBlue').addEventListener('input',changeColor);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video part 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <div class="container">
+
+        <video ontimeupdate="videotimeupdate()">
+            <source src="vid.mp4" type="video/mp4">
+        </video><br><br>
+        <input type="range"  min="0" max="100" step="1" value="0" class="slider" onchange="changeslider()"> 
+        <span id="currentTime">00:00</span> / <span id="durationtime">00:00</span>
+        <br><br>
+        <button onclick="playPause()" id="playpausebtn">play</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="returnToStart()"><<</button>
+        <button onclick="return5sec()"><</button>
+        <button onclick="add5sec()">></button>
+        <button onclick="gotoend()">>></button>
+        <input id="volumeslider" type="range" min="0" max="100" value="100" step="1" onchange="setVolume()"><button id="mutebtn" onclick="muteVid()">mute</button>
+       speed <input type="range" id="speed" min="0" max="4" value="1" step="1" onchange="setspeed()"> <button id="fullscreenbtn" onclick="fullScreen()">[ &nbsp; ]</button>
+
+
+    </div>
+    <script src="fun.js"></script>
+</body>
+</html>
