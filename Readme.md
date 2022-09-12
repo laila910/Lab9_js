@@ -10,4 +10,4 @@
   ![image](imageTasks/imag2.jpg)
 
   ## solve Part2 as :
-  ![image]()
+  ![image](imageTasks/solvepart2.jpg)
